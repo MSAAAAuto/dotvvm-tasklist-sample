@@ -6,6 +6,10 @@
         color: #3d3d3d;
         font-weight: 600;
         font-size: 20px;
+
+        &:active{
+            -webkit-box-shadow: none;
+        }
     }
 
     .navigation {

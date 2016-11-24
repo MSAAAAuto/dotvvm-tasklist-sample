@@ -5,6 +5,8 @@
   color: #3d3d3d;
   font-weight: 600;
   font-size: 20px; }
+  body .projectName:active {
+    -webkit-box-shadow: none; }
 
 body .navigation {
   display: inline-block;

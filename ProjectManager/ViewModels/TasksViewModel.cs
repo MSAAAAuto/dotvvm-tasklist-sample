@@ -27,8 +27,8 @@ namespace ProjectManager.ViewModels
         public string SelectedUser { get; set; }
 
         public void AddTask()
-        {           
-            var dataFileTasks = System.IO.File.ReadAllText(@"C:\Users\chyli\Documents\Visual Studio 2015\Projects\ProjectManager\ProjectManager\json\projects.json");
+        {
+            var dataFileTasks = System.IO.File.ReadAllText(path);
 
             var projects = JsonConvert.DeserializeObject<List<ProjectData>>(dataFileTasks);
 
@@ -36,16 +36,16 @@ namespace ProjectManager.ViewModels
             Tasks.Add(new TaskData() { NameOfUser = SelectedUser, TaskDescription = AddedTaskDescription });
             project.Tasks.Add(new TaskData() { NameOfUser = SelectedUser, TaskDescription = AddedTaskDescription });
             AddedTaskDescription = "";
-            
+
             string projectDataJson = JsonConvert.SerializeObject(projects, Formatting.Indented);
-            System.IO.File.WriteAllText(@"C:\Users\chyli\Documents\Visual Studio 2015\Projects\ProjectManager\ProjectManager\json\projects.json", projectDataJson);
+            System.IO.File.WriteAllText(path, projectDataJson);
         }
 
         public override Task PreRender()
         {
             if (!string.IsNullOrEmpty(Id))
             {
-                var dataFileTasks = System.IO.File.ReadAllText(@"C:\Users\chyli\Documents\Visual Studio 2015\Projects\ProjectManager\ProjectManager\json\projects.json");
+                var dataFileTasks = System.IO.File.ReadAllText(path);
 
                 var projects = JsonConvert.DeserializeObject<List<ProjectData>>(dataFileTasks);
                 Project = projects.FirstOrDefault(s => s.Id.ToString() == Id);

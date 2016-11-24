@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DotVVM.Framework.ViewModel;
 using Newtonsoft.Json;
 using ProjectManager.Models;
+using System.Web;
 
 namespace ProjectManager.ViewModels
 {
@@ -13,19 +14,19 @@ namespace ProjectManager.ViewModels
     {
         public string AddedProjectTitle { get; set; }
 
-        public List<ProjectData> Projects { get; set; } = new List<ProjectData>();      
+        public List<ProjectData> Projects { get; set; } = new List<ProjectData>();
 
         public void AddProject()
         {
             Projects.Add(new ProjectData() { Title = AddedProjectTitle });
             AddedProjectTitle = "";
             string projectDataJson = JsonConvert.SerializeObject(Projects, Formatting.Indented);
-            System.IO.File.WriteAllText(@"C:\Users\chyli\Documents\Visual Studio 2015\Projects\ProjectManager\ProjectManager\json\projects.json", projectDataJson);
+            System.IO.File.WriteAllText(path, projectDataJson);
         }
 
         public override Task PreRender()
         {
-            var dataFileProjects = System.IO.File.ReadAllText(@"C:\Users\chyli\Documents\Visual Studio 2015\Projects\ProjectManager\ProjectManager\json\projects.json");
+            var dataFileProjects = System.IO.File.ReadAllText(path);
             Projects = JsonConvert.DeserializeObject<List<ProjectData>>(dataFileProjects);
             return base.PreRender();
         }
