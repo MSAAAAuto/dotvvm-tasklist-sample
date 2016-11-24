@@ -1,0 +1,43 @@
+﻿@viewModel ProjectManager.ViewModels.TasksViewModel, ProjectManager
+@masterPage Views/Base.dotmaster
+
+<dot:Content ContentPlaceHolderID="HeaderTemplate">
+
+
+</dot:Content>
+
+<dot:Content ContentPlaceHolderID="ContentTemplate">
+    <dot:LinkButton class="btn projectName">{{value: "> " + Project.Title}}</dot:LinkButton>
+    <div class="page">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <dot:Literal class="col-md-2 literalText" Text="Add Task" />
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <dot:ComboBox class="col-md-1 usersDropdown" DataSource="{value: Users}" SelectedValue="{value: SelectedUser}" />
+            <dot:TextBox class="box col-md-3" Text="{value: AddedTaskDescription}" placeholder="Task description" />
+            <dot:Button class="btn col-md-1" Text="ADD" Click="{command: AddTask()}"></dot:Button>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-11">
+                <dot:GridView DataSource="{value: Project.Tasks}">
+                    <Columns>
+                        <dot:GridViewTextColumn HeaderText="Assigned To" ValueBinding="{value: NameOfUser}" />
+                        <dot:GridViewTextColumn HeaderText="Description" ValueBinding="{value: TaskDescription}" />
+                        <dot:GridViewTextColumn HeaderText="State" ValueBinding="{value: IsCompleted == true ? "Active" : "Inactive"}" />
+                    </Columns>
+                </dot:GridView>
+            </div>
+        </div>
+    </div>
+
+</dot:Content>
+
+<dot:Content ContentPlaceHolderID="ScriptsTemplate">
+
+
+</dot:Content>
+
+

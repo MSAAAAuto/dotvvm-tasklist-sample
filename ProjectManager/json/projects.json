@@ -1,0 +1,89 @@
+[
+  {
+    "Id": "df17b9e8-f416-427f-b132-771232998f55",
+    "Title": "Project 1",
+    "IsCompleted": false,
+    "Tasks": [
+      {
+        "Id": "ab6c5428-db27-4e7e-8be1-b7b445b00c90",
+        "NameOfUser": "John Smith",
+        "TaskDescription": "Task 1",
+        "IsCompleted": false
+      },
+      {
+        "Id": "c3f1993c-2540-45d2-ba47-81eed759351b",
+        "NameOfUser": "Peter Pettigrew",
+        "TaskDescription": "Task 2",
+        "IsCompleted": false
+      },
+      {
+        "Id": "1329159b-2589-4f3c-b275-04655316f3f3",
+        "NameOfUser": "John Smith",
+        "TaskDescription": "Task 3",
+        "IsCompleted": false
+      },
+      {
+        "Id": "bf42fc86-1f6b-46a6-9c37-e2327a2797c5",
+        "NameOfUser": "George Lucas",
+        "TaskDescription": "Task 3",
+        "IsCompleted": false
+      }
+    ]
+  },
+  {
+    "Id": "dc8849fc-d5c5-43c3-8a2c-102c9bfe9596",
+    "Title": "Project 2",
+    "IsCompleted": false,
+    "Tasks": [
+      {
+        "Id": "3cd85e83-74c3-4905-bc53-7baf07567618",
+        "NameOfUser": "John Smith",
+        "TaskDescription": "Task 1.1",
+        "IsCompleted": false
+      },
+      {
+        "Id": "fcca6776-8abc-483d-b5c4-34c27b2510b6",
+        "NameOfUser": "Peter Pettigrew",
+        "TaskDescription": "Task 2.1",
+        "IsCompleted": false
+      }
+    ]
+  },
+  {
+    "Id": "f6154936-8388-492b-ae00-351710be60a8",
+    "Title": "Project 3",
+    "IsCompleted": false,
+    "Tasks": [
+      {
+        "Id": "62c3b515-d966-4623-82f3-a1722f4659d9",
+        "NameOfUser": "Gustav Gergo",
+        "TaskDescription": "Task 3.1",
+        "IsCompleted": false
+      },
+      {
+        "Id": "50c2ce74-3917-4c58-af19-37ef77af87d0",
+        "NameOfUser": "John Smith",
+        "TaskDescription": "Task 3.2",
+        "IsCompleted": false
+      },
+      {
+        "Id": "a26deb35-3fb8-41b2-ad12-da943b879cf3",
+        "NameOfUser": "Peter Pettigrew",
+        "TaskDescription": "Task 3.3",
+        "IsCompleted": false
+      },
+      {
+        "Id": "e51a5fef-1847-4ecb-8d12-8e22e30971fb",
+        "NameOfUser": "George Lucas",
+        "TaskDescription": "Star Wars",
+        "IsCompleted": false
+      },
+      {
+        "Id": "ecbfb7db-1837-4462-bf31-22029716f8b1",
+        "NameOfUser": "Peter Pettigrew",
+        "TaskDescription": "Task 3.5",
+        "IsCompleted": false
+      }
+    ]
+  }
+]

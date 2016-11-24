@@ -1,0 +1,44 @@
+﻿@viewModel ProjectManager.ViewModels.ProjectsViewModel, ProjectManager
+@masterPage Views/Base.dotmaster
+
+<dot:Content ContentPlaceHolderID="HeaderTemplate">
+
+
+</dot:Content>
+
+<dot:Content ContentPlaceHolderID="ContentTemplate">
+
+    <div class="page">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <dot:Literal class="col-md-2 literalText" Text="Add Project" />
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <dot:TextBox class="box col-md-2" Text="{value: AddedProjectTitle}" />
+            <dot:Button class="btn col-md-1" Text="ADD" Click="{command: AddProject()}"></dot:Button>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-11">
+                <dot:Repeater DataSource="{value: Projects}">
+                    <div class="project">
+                        <dot:LinkButton Click="{command: _root.RedirectToTasks(Id)}">{{value: Title}}</dot:LinkButton>
+                    </div>
+                </dot:Repeater>
+            </div>
+        </div>
+    </div>
+
+</dot:Content>
+
+<dot:Content ContentPlaceHolderID="ScriptsTemplate">
+
+
+</dot:Content>
+
+
+
+
+
+

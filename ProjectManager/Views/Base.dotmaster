@@ -1,0 +1,25 @@
+﻿@viewModel ProjectManager.ViewModels.BaseViewModel, ProjectManager
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <dot:RequiredResource Name="BootstrapStyle" />
+    <dot:RequiredResource Name="DefaultStyle" />
+
+    <dot:ContentPlaceHolder ID="HeaderTemplate" />
+</head>
+<body>
+    <div class="navigation">
+        <img class="logo" src="/Style/images/dotvvm_tree.png" />
+        <dot:LinkButton Click="{command: RedirectToProjects()}" class="btn">Projects</dot:LinkButton>
+        <dot:LinkButton Click="{command: RedirectToUsers()}" class="btn right">Users</dot:LinkButton>
+    </div>
+    <dot:ContentPlaceHolder ID="ContentTemplate" />
+
+    <dot:ContentPlaceHolder ID="ScriptsTemplate" />
+</body>
+</html>
+
+

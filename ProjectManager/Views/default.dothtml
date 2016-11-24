@@ -1,0 +1,22 @@
+﻿@viewModel ProjectManager.ViewModels.DefaultViewModel, ProjectManager
+@masterPage Views/Base.dotmaster
+
+<dot:Content ContentPlaceHolderID="HeaderTemplate">
+
+
+</dot:Content>
+
+<dot:Content ContentPlaceHolderID="ContentTemplate">
+
+    <div class="page">
+        <div class="col-md-12 center">
+            <h1>Project Manager</h1>
+        </div>
+    </div>
+
+</dot:Content>
+
+<dot:Content ContentPlaceHolderID="ScriptsTemplate">
+
+
+</dot:Content>
